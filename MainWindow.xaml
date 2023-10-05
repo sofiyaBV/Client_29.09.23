@@ -7,6 +7,32 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition/>
+            <RowDefinition Height="0.3*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+            <Label Content="Ip" Margin="10, 0, 10, 0"/>
+            <TextBox x:Name="tb_ip" Width="200"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Grid.Column="1">
+            <Label Content="Port" Margin="10, 0, 10, 0"/>
+            <TextBox x:Name="tb_port" Width="200"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Grid.Row="1">
+            <Label Content="Client" Margin="10, 0, 0, 0"/>
+            <TextBox x:Name="tb_client" Margin="10" Height="220"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="1">
+            <Label Content="Server" Margin="10, 0, 0, 0"/>
+            <TextBlock x:Name="tb_server" Margin="10" Height="220"/>
+        </StackPanel>
+        <Button x:Name="bt_conect" Content="Conect" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" Margin="10 0 10 0" Click="bt_conect_Click"/>
+        <Button x:Name="bt_messege" Content="Messege" Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" Margin="10 0 10 0" Click="bt_messege_Click"/>
     </Grid>
 </Window>
